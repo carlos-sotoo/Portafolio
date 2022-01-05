@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portafolio | Carlos Fernando Soto</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="flex-container">
+        <img src="images/CarlosSoto.svg" alt="Carlos Soto" class="svgName">
+        <nav class="flex-container menu">
+            <a href="#home" id="nav-btn">
+                <span class="material-icons">home</span>
+                <span class="text-icons">Inicio</span> 
+            </a>
+            <a href="#profile" id="nav-btn">
+                <span class="material-icons">person</span>
+                <span class="text-icons">Perfil</span>
+            </a>
+            <a href="#education" id="nav-btn">
+                <span class="material-icons">school</span>
+                <span class="text-icons">Educación</span>
+            </a>
+            <a href="#projects" id="nav-btn">
+                <span class="material-icons">work</span>
+                <span class="text-icons">Proyectos</span>
+            </a>
+            <a href="#contact" id="nav-btn">
+                <span class="material-icons">call</span>
+                <span class="text-icons">Contacto</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <button class="menu-btn">
+            <span class="menu-span"></span>
+        </button>
+
+        <section id="home">
+            <div class="animate-profile"></div>
+            <div class="text-profile">
+                <a class="typewrite" data-period="2000" data-type='["Bienvenido a mi portafolio.","Web Developer.", "Web Designer."]'>
+                    <span class="wrap"></span>
+                </a>     
+            </div>
+        </section>
+        <section id="profile">perfil</section>
+        <section id="education">educacion</section>
+        <section id="projects">Proyectos</section>
+        <section id="contact">Contacto</section>
+
+    </main>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
