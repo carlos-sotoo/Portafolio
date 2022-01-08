@@ -11,6 +11,7 @@ header{
     background-color: var(--main-color);
     justify-content: space-between;
     height: 60px;
+    z-index: 900;
 }
 
 .svgName{
@@ -99,7 +100,7 @@ header{
     width: 50px;
     border-radius: 50%;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     opacity: 0.8;
     justify-content: center;
     align-items: center;
@@ -124,7 +125,7 @@ header{
     text-shadow: 1px 1px 2px #000;
 }
 
-#nav-btn .material-icons{
+#nav-btn i{
     font-size: 3em;
     padding-left: 60px;
     color: var(--main-color);
@@ -135,12 +136,15 @@ header{
     padding-left: 20px;
 }
 
+main{
+    z-index: -1;
+}
+
 section{
     display: flex;
     position: relative;
     min-height: calc(100vh - 60px);
     width: 100%;
-    z-index: -1;
     padding-top:60px;
 }
 
@@ -156,7 +160,6 @@ section{
     width: 200px;
     height: 205px;
     overflow: hidden;
-    
 }
 
 .animate-profile::after{
@@ -206,8 +209,100 @@ section{
 
 @keyframes cursor {
     from, to { border-color: transparent }
-  50% { border-color: #fff }
-    
+  50% { border-color: #fff }   
+}
+
+#profile{
+    background-color: var(--white-color);
+    flex-flow: column nowrap;
+}
+
+.profile-content{
+    width: 80%;
+    flex-flow: column nowrap;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--second-color);
+    margin-top: 15px;
+    padding: 15px;
+    color: var(--white-color);
+    filter: drop-shadow(2px 2px 5px #000);
+    transform: translate(-150%,0);
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-content.active{
+    transform: translate(0,0);
+}
+
+.profile-content span{
+    font-size: 2rem;
+    text-align: center;
+    font-style: oblique;
+}
+
+.profile-img{
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 6px solid var(--main-color);
+}
+
+.sobre-mi{
+    padding: 10px 8vw;
+    text-align:start;
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.sobre-mi p{
+    font-size: 1.1rem;
+    line-height: 22px;
+} 
+
+.fab{
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+    color: #000;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-network{
+    width: fit-content;
+}
+
+.social-network a:hover > .fab{
+    background-color: transparent;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px rgb(148, 148, 148);
+}
+
+.btn-cv{
+    background-color: transparent;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white-color);
+    border: 3px solid var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cv:hover{
+    color: var(--second-color);
+    background-color: var(--white-color);
 }
 
 @media only screen and (min-width:700px) {
@@ -249,9 +344,10 @@ section{
         background: linear-gradient(to left, var(--third-color), var(--third-color)) no-repeat;
         background-position: 0 60px;
         transition: all .2s ease-in-out;
+        cursor: pointer;
     }
     
-    #nav-btn .material-icons{
+    #nav-btn i{
         font-size: 2em;
         padding: 0 10px;
         color: var(--white-color);

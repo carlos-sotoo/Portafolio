@@ -9,30 +9,34 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c1ce6578e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="flex-container">
         <img src="images/CarlosSoto.svg" alt="Carlos Soto" class="svgName">
         <nav class="flex-container menu">
             <a href="#home" id="nav-btn">
-                <span class="material-icons">home</span>
+                <i class="fas fa-home"></i>
                 <span class="text-icons">Inicio</span> 
             </a>
             <a href="#profile" id="nav-btn">
-                <span class="material-icons">person</span>
+                <i class="fas fa-user-alt"></i>
                 <span class="text-icons">Perfil</span>
             </a>
             <a href="#education" id="nav-btn">
-                <span class="material-icons">school</span>
+                <i class="fas fa-graduation-cap"></i>
                 <span class="text-icons">Educación</span>
             </a>
+            <a href="#skills" id="nav-btn">
+                <i class="fas fa-lightbulb"></i>
+                <span class="text-icons">Habilidades</span>
+            </a>
             <a href="#projects" id="nav-btn">
-                <span class="material-icons">work</span>
+                <i class="fas fa-briefcase"></i>
                 <span class="text-icons">Proyectos</span>
             </a>
             <a href="#contact" id="nav-btn">
-                <span class="material-icons">call</span>
+                <i class="fas fa-phone-alt"></i>
                 <span class="text-icons">Contacto</span>
             </a>
         </nav>
@@ -50,8 +54,49 @@
                 </a>     
             </div>
         </section>
-        <section id="profile">perfil</section>
-        <section id="education">educacion</section>
+        <section id="profile">
+            <article class="profile-content flex-container">
+                <img src="images/foto.png" alt="foto de perfil" class="profile-img">
+                <span>Carlos Fernando Soto Chaguala</span>
+                <div class="sobre-mi">
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Soy una persona responsable, puntual y muy comprometida
+                        con las labores que se me asignan, aprendo con rapidez y
+                        facilidad. Me gusta asumir nuevos retos para motivarme a
+                        seguir creciendo profesionalmente, también soy una
+                        persona organizada.
+                    </p>
+                </div>
+                <div class="social-network">
+                    <a href="https://www.facebook.com/CarlosSotoCh95/" target="_blank" ><i class="fab fa-facebook-f"></i> </a>
+                    <a href="https://www.instagram.com/_.carlossoto._/" target="_blank" ><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/carlossotoch/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/carlos-sotoo/" target="_blank" ><i class="fab fa-github"></i></a>
+                </div>
+                <button class="btn-cv">Descargar CV</button>
+            </article>
+        </section>
+        <section id="education">
+            <article class="education-content">
+                <div class="info-academica">
+                    <h2>Formación académica</h2>
+                    <p>
+                        <h3>Ingeniería de sistemas y computación</h3>
+                        Universidad Tecnológica de Pereira
+                    </p>
+                    <p>
+                        <h3>Técnico en diseño y desarrollo web</h3>
+                        Instituto técnico superior de Pereira
+                    </p>
+                    <p>
+                        <h3>Bachiller técnico</h3>
+                        Instituto técnico superior de Pereira
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section id="skills">Educacion</section>
         <section id="projects">Proyectos</section>
         <section id="contact">Contacto</section>
 

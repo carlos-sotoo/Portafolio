@@ -7,11 +7,12 @@ import textdecore from "./modules/writeMachine.js"
 window.addEventListener("DOMContentLoaded",e=>{
     hamburguer(".menu-btn",".menu");
     smoothScroll("#nav-btn");
-    scrolling(200,".animate-profile");
+    scrolling(200,500,".animate-profile");
     textdecore();
 });
 
 
 window.addEventListener("scroll",()=>{
-    scrolling(200,".animate-profile");
+    scrolling(200,500,".animate-profile");
+    scrolling(200,1100,".profile-content");
 });
