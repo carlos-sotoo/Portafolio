@@ -1,4 +1,4 @@
-var TxtType = function(el, toRotate, period) {
+let TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -9,8 +9,8 @@ var TxtType = function(el, toRotate, period) {
 };
 
 TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+    let i = this.loopNum % this.toRotate.length;
+    let fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -20,8 +20,8 @@ TxtType.prototype.tick = function() {
 
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-    var that = this;
-    var delta = 200 - Math.random() * 100;
+    let that = this;
+    let delta = 200 - Math.random() * 100;
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -40,12 +40,10 @@ TxtType.prototype.tick = function() {
 };
 
 export default function textdecore() {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
+    let elements = document.querySelector('.typewrite');
+    let toRotate = elements.getAttribute('data-type');
+    let period = elements.getAttribute('data-period');
+    if (toRotate) {
+        new TxtType(elements, JSON.parse(toRotate), period);
     }
 };

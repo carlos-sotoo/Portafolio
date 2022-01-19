@@ -19,17 +19,9 @@
                 <i class="fas fa-home"></i>
                 <span class="text-icons">Inicio</span> 
             </a>
-            <a href="#profile" id="nav-btn">
+            <a href="#sobremi" id="nav-btn">
                 <i class="fas fa-user-alt"></i>
-                <span class="text-icons">Perfil</span>
-            </a>
-            <a href="#education" id="nav-btn">
-                <i class="fas fa-graduation-cap"></i>
-                <span class="text-icons">Educación</span>
-            </a>
-            <a href="#skills" id="nav-btn">
-                <i class="fas fa-lightbulb"></i>
-                <span class="text-icons">Habilidades</span>
+                <span class="text-icons">Sobre mí</span>
             </a>
             <a href="#projects" id="nav-btn">
                 <i class="fas fa-briefcase"></i>
@@ -47,19 +39,33 @@
         </button>
 
         <section id="home">
-            <div class="animate-profile"></div>
-            <div class="text-profile">
-                <a class="typewrite" data-period="2000" data-type='["Bienvenido a mi portafolio.","Web Developer.", "Web Designer."]'>
+            <div class="img-profile">
+                <img src="./images/foto.png" alt="profile photo">
+            </div>
+            <div class="text-profile flex-container">
+                <h2>Hola</h2>
+                <h2>Soy Carlos Soto</h2>
+                <a class="typewrite" data-period="2000" data-type='["Bienvenido a mi portafolio.","Web Developer.","Frontend Developer.","Web Designer."]'>
                     <span class="wrap"></span>
-                </a>     
+                </a>
+                <div class="social-network">
+                    <a href="https://www.facebook.com/CarlosSotoCh95/" target="_blank" ><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/_.carlossoto._/" target="_blank" ><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/carlossotoch/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/carlos-sotoo/" target="_blank" ><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </section>
-        <section id="profile">
-            <article class="profile-content flex-container">
-                <img src="images/foto.png" alt="foto de perfil" class="profile-img">
-                <span>Carlos Fernando Soto Chaguala</span>
-                <div class="sobre-mi">
-                    <h2>Sobre mí</h2>
+        <section id="sobremi">
+            <h2 class="title">&#60;Sobre mí&#47;&#62;</h2>
+            <div class="content-sobremi">
+                <nav class="nav-sobremi">
+                    <a target="_blank" id="nav-sobremi" class="active" data-name="perfil">Perfil</a>
+                    <a target="_blank" id="nav-sobremi" data-name="formacion">Formación</a>
+                    <a target="_blank" id="nav-sobremi" data-name="habilidades">Habilidades</a>
+                </nav>
+                <article class="perfil flex-container">
+                    <span>Carlos Fernando Soto Chaguala</span>
                     <p>
                         Soy una persona responsable, puntual y muy comprometida
                         con las labores que se me asignan, aprendo con rapidez y
@@ -67,36 +73,77 @@
                         seguir creciendo profesionalmente, también soy una
                         persona organizada.
                     </p>
-                </div>
-                <div class="social-network">
-                    <a href="https://www.facebook.com/CarlosSotoCh95/" target="_blank" ><i class="fab fa-facebook-f"></i> </a>
-                    <a href="https://www.instagram.com/_.carlossoto._/" target="_blank" ><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/carlossotoch/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/carlos-sotoo/" target="_blank" ><i class="fab fa-github"></i></a>
-                </div>
-                <button class="btn-cv">Descargar CV</button>
-            </article>
-        </section>
-        <section id="education">
-            <article class="education-content">
-                <div class="info-academica">
-                    <h2>Formación académica</h2>
-                    <p>
-                        <h3>Ingeniería de sistemas y computación</h3>
-                        Universidad Tecnológica de Pereira
-                    </p>
-                    <p>
-                        <h3>Técnico en diseño y desarrollo web</h3>
-                        Instituto técnico superior de Pereira
-                    </p>
-                    <p>
-                        <h3>Bachiller técnico</h3>
-                        Instituto técnico superior de Pereira
-                    </p>
-                </div>
-            </article>
-        </section>
-        <section id="skills">Educacion</section>
+                    <a class="btn-cv">Descargar CV</a>
+                </article>
+                <article class="formacion flex-container">
+                    <div>
+                        <h3>Formación Academica</h3>
+                        <ul>
+                            <li>
+                                <h4>Ingeniería de sistemas y computación</h4>
+                                Universidad Tecnológica de Pereira
+                            </li>
+                            <li>
+                                <h4>Técnico en diseño y desarrollo web</h4>
+                                Instituto técnico superior de Pereira
+                            </li>
+                            <li>
+                                <h4>Bachiller técnico</h4>
+                                Instituto técnico superior de Pereira
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <h3>Cursos</h3>
+                            <li>
+                                <h4>Desarrollo web HTML, CSS, Javascript</h4>
+                                Coursera - University of Michigan
+                            </li>
+                            <li>
+                                <h4>Curso Javascript</h4>
+                                Youtube - Jon Mircha
+                            </li>
+                            <li>
+                                <h4>Fullstack Web developer</h4>
+                                Full Stack Open 2021
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </article>
+                <article class="habilidades flex-container">
+                    <figure>
+                        <img src="./images/icons/html.svg" alt="HTML5 logo" class="logoSkills">
+                        <figcaption>HTML 5</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/icons/css.svg" alt="CSS3 logo" class="logoSkills">
+                        <figcaption>CSS 3</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/icons/javascript.svg" alt="Javascript logo" class="logoSkills">
+                        <figcaption>Javascript</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/icons/react.svg" alt="React logo" class="logoSkills">
+                        <figcaption>React</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/icons/nodejs.svg" alt="NodeJs logo" class="logoSkills">
+                        <figcaption>Node JS</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/icons/json.svg" alt="JSON logo" class="logoSkills">
+                        <figcaption>JSON</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/icons/python.svg" alt="Python logo" class="logoSkills">
+                        <figcaption>Python</figcaption>
+                    </figure>
+                </article>
+            </div>
+                    </section>
         <section id="projects">Proyectos</section>
         <section id="contact">Contacto</section>
 

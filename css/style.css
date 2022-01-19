@@ -1,17 +1,21 @@
 :root {
-    --main-color: #3AAFA9;
-    --white-color: #FEFFFF;
-    --second-color: #17252A;
-    --third-color: #2B7A78;
+    --main-color: #1B1A22;
+    --white-color: #E7E6EA;
+    --second-color: #27262E;
+    --third-color: #5AE6BE;
+    --fourth-color: #848494;
 }
 
 header{
     position: fixed;
     width: 100%;
-    background-color: var(--main-color);
-    justify-content: space-between;
     height: 60px;
     z-index: 900;
+}
+
+body{
+    background-color: var(--main-color);
+    width: 100%;
 }
 
 .svgName{
@@ -22,7 +26,6 @@ header{
 .flex-container{
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
 }
 
 .menu-btn{
@@ -30,13 +33,12 @@ header{
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 15px;
-    right: 15px;
+    right: 0;
+    top: 0;
     border: none;
     border-radius: 50%;
-    background-color: var(--main-color);
-    box-shadow: 1px 1px 3px #000;
     z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .menu-span{
@@ -94,14 +96,14 @@ header{
     position: fixed;
     flex-flow: column nowrap;
     background-color: var(--second-color);
-    bottom: 17px;
-    right: 17px;
+    top:  5px;
+    right: 5px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     overflow: hidden;
-    transition: all 0.2s ease;
-    opacity: 0.8;
+    transition: all 0.3s ease;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     z-index: 900;
@@ -111,8 +113,10 @@ header{
     width: 100%;
     height: 100%;
     bottom: 0;
+    top:0;
     right: 0;
     border-radius: 0;
+    opacity: 0.95;
     z-index: 900;
 }
 
@@ -122,198 +126,284 @@ header{
     height: 60px;
     color: var(--white-color);
     align-items: center;
-    text-shadow: 1px 1px 2px #000;
 }
 
 #nav-btn i{
-    font-size: 3em;
-    padding-left: 60px;
-    color: var(--main-color);
+    font-size: 2.5rem;
+    padding-left: 20%;
+    color: var(--white-color);
+    opacity: 1;
 }
 
 #nav-btn .text-icons{
-    font-size: 1.5em;
+    font-size: 2rem;
     padding-left: 20px;
 }
 
 main{
     z-index: -1;
+    width: 100%;
 }
 
 section{
     display: flex;
-    position: relative;
-    min-height: calc(100vh - 60px);
+    min-height: 100vh;
     width: 100%;
-    padding-top:60px;
 }
 
 #home{
+    padding-top: 60px;
     background-color: var(--main-color);
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
 }
 
-.animate-profile{
-    position: relative;
-    width: 200px;
-    height: 205px;
-    overflow: hidden;
+#home::after{
+    position: absolute;
+    content: "</>";
+    top: 70vh;
+    color: var(--second-color);
+    opacity: .45;
+    font-size: 15rem;
+    font-weight: 700;
+    z-index: 1;
 }
 
-.animate-profile::after{
+#home::before{
     position: absolute;
     content: "";
-    background: url("/images/animation-mi.svg") no-repeat;
-    width: 190px;
-    height: 190px;
-    top: 205px;
     left: 0;
-    right: 0;
-    border-radius: 50%;
-    background-position: bottom;
-    border: 5px solid var(--second-color);
-    transition: all 0.5s ease-in-out;
+    top:0;
+    width: 50%;
+    height: 70vh;
+    background-color: var(--second-color);
+    z-index: 1;
 }
 
-.animate-profile::before{
-    position: absolute;
-    content: "";
-    width: 200px;
-    height: 10px;
-    background-color: #17252a71;
-    bottom: 0px;
-    border-radius: 50%;
+#home .img-profile{
+    position: relative;
+    top: 15px;
+    right: 15px;
+    max-width: 400px;
+    max-height: 400px;
+    width: 70%;
+    height: 70%;
+    background-color: var(--main-color);
+    z-index: 100;
 }
 
-.animate-profile.active::after{
-    top: 0;
+#home .img-profile img{
+    background-color: var(--fourth-color);
+    position: relative;
+    bottom: 15px;
+    left: 15px;
 }
 
-.text-profile{
-    font-size: 2em;
-    font-weight: 900;
+#home .text-profile{
+    margin-top: 30px;
+    width: fit-content;
+    font-size: 1.6rem;
     color: var(--white-color);
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    line-height: 1.5;
-    height: 2em;
+    text-align: left;
+    flex-flow: column nowrap;
+    z-index: 100;
 }
 
-.wrap { 
-    border-right: 0.12em solid #fff;
+#home .text-profile h2:nth-child(1){
+    font-size: 2.5rem;
+    color: var(--third-color);
+    font-weight: 700;
+}
+
+#home .text-profile h2:nth-child(2){
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+#home .text-profile .wrap {
+    border-right: 0.12em solid var(--white-color);
     animation: cursor 300ms infinite;
 }
 
 @keyframes cursor {
     from, to { border-color: transparent }
-  50% { border-color: #fff }   
+  50% { border-color: var(--white-color)}   
 }
 
-#profile{
-    background-color: var(--white-color);
-    flex-flow: column nowrap;
+#home .text-profile .social-network{
+    width: fit-content;
+    margin: 10px auto;
 }
 
-.profile-content{
-    width: 80%;
-    flex-flow: column nowrap;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    background-color: var(--second-color);
-    margin-top: 15px;
-    padding: 15px;
+#home .text-profile .social-network .fab{
+    font-size: 35px;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
     color: var(--white-color);
-    filter: drop-shadow(2px 2px 5px #000);
-    transform: translate(-150%,0);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.profile-content.active{
+#home .text-profile .social-network a:hover > .fab{
+   color: var(--second-color);
+}
+
+ #sobremi{
+    flex-flow: column nowrap;
+    padding-top: 60px;
+    align-items: center;
+}
+
+#sobremi .title{
+    font-size: 4rem;
+    color: var(--second-color);
+    font-weight: 700;
+    opacity: .5;
+}
+
+#sobremi .content-sobremi{
+    position: relative;
+    width: 90%;
+    height: 70vh;
+    background-color: var(--second-color);
+    overflow: hidden;
+}
+
+#sobremi .content-sobremi .nav-sobremi{
+    width: 100%;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+#sobremi .content-sobremi .nav-sobremi a{
+    position: relative;
+    padding: 3px 3px 0px;
+    cursor: pointer;
+    background-color: var(--second-color);
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+
+#sobremi .content-sobremi .nav-sobremi a:hover{
+    bottom: 1px;
+    text-shadow: 0 1px 1px var(--main-color),0 2px 2px var(--third-color);
+}
+
+#sobremi .content-sobremi .nav-sobremi a::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    background-color: var(--third-color);
+    height: 30px;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+#sobremi .content-sobremi .nav-sobremi a.active::before{
+    width: 95%;
+}
+#sobremi .content-sobremi .nav-sobremi a.active:hover{
+    color: var(--white-color);
+    text-shadow: none;
+    bottom: 0;
+}
+
+#sobremi .content-sobremi .perfil,
+#sobremi .content-sobremi .formacion,
+#sobremi .content-sobremi .habilidades{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    flex-flow: column nowrap;
+    color: var(--white-color);
+    margin: auto;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    transform: translate(-110%,0);
+    transition: all .3s ease-in-out;
+}
+
+#sobremi .content-sobremi .perfil{
     transform: translate(0,0);
 }
 
-.profile-content span{
-    font-size: 2rem;
-    text-align: center;
-    font-style: oblique;
-}
-
-.profile-img{
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    border: 6px solid var(--main-color);
-}
-
-.sobre-mi{
-    padding: 10px 8vw;
-    text-align:start;
-}
-
-h2{
-    font-size: 2rem;
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.sobre-mi p{
-    font-size: 1.1rem;
-    line-height: 22px;
-} 
-
-.fab{
-    font-size: 35px;
-    width: 35px;
-    height: 35px;
-    color: #000;
-    background-color: var(--white-color);
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-
-.social-network{
-    width: fit-content;
-}
-
-.social-network a:hover > .fab{
-    background-color: transparent;
-    color: var(--white-color);
-    text-shadow: 1px 1px 2px rgb(148, 148, 148);
-}
-
-.btn-cv{
-    background-color: transparent;
-    border-radius: 30px;
-    margin: 10px;
-    padding: 10px;
-    font-size: 1.2rem;
+#sobremi .content-sobremi .perfil span{
+    font-size: 1.6rem;
+    margin: 5px 0;
     font-weight: 700;
-    color: var(--white-color);
-    border: 3px solid var(--white-color);
+    text-align: center;
+}
+
+#sobremi .content-sobremi .perfil p{
+    font-size: 1.4rem;
+}
+
+#sobremi .content-sobremi .perfil .btn-cv{
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to left, var(--third-color), var(--third-color)) no-repeat;
+    background-position: center;
+    background-size: 0 100%;
+    transition: all .2s ease-in-out;
+    color: var(--third-color);
+    border: 3px solid var(--third-color);
     transition: all 0.3s ease-in-out;
 }
 
-.btn-cv:hover{
+#sobremi .content-sobremi .perfil .btn-cv:hover{
     color: var(--second-color);
-    background-color: var(--white-color);
+    background-size: 100% 100%;
+    filter: drop-shadow(0 0 5px var(--third-color));
+}
+
+#sobremi .content-sobremi .formacion {
+    font-size: 1.2rem;
+}
+
+#sobremi .content-sobremi .formacion h3{
+    font-size: 1.7rem;
+    margin: 5px auto;
+    color: var(--third-color);
+}
+
+#sobremi .content-sobremi .formacion h4{
+    font-size: 1.4rem;
+    margin: 2px auto;
+    font-weight: 700;
+}
+
+#sobremi .content-sobremi .habilidades{
+    flex-flow: row wrap;
+    justify-content: start;
+}
+
+#sobremi .content-sobremi .habilidades figure{
+    text-align: center;
+    margin: 0 12px;
+}
+
+#sobremi .content-sobremi .habilidades .logoSkills{
+ width: 50px;
+ height: 50px;
 }
 
 @media only screen and (min-width:700px) {
     header{
-        justify-content: space-between;
         height: 60px;
+        justify-content: space-between;
     }
 
     .svgName{
         height: 80%;
-        margin: auto 15px;
+        margin: auto calc(20% -  100px);
     }
 
     .menu-btn{
@@ -333,30 +423,30 @@ h2{
 
     #nav-btn{
         display: flex;
-        width: 50px;
+        width: 60px;
         flex-flow: column nowrap;
         height: 60px;
-        color: var(--white-color);
         align-items: center;
         justify-content: center;
-        text-shadow: 1px 1px 2px #000;
-        padding: 0 5px;
         background: linear-gradient(to left, var(--third-color), var(--third-color)) no-repeat;
-        background-position: 0 60px;
+        background-position: 65px 0;
         transition: all .2s ease-in-out;
+        font-weight: bold;
         cursor: pointer;
     }
     
     #nav-btn i{
         font-size: 2em;
-        padding: 0 10px;
+        padding: 0;
         color: var(--white-color);
+        transition: all .2s ease-in-out;
     }
     
     #nav-btn .text-icons{
         font-size: 1em;
-        height: 0;
-        padding-left: 0;
+        width: 0;
+        height: 14px;
+        padding: 0;
         overflow: hidden;
         transition: all .2s ease-in-out;
     }
@@ -364,10 +454,86 @@ h2{
     #nav-btn:hover{
         width: 100px;
         background-position: 0 0;
-        opacity: .9;
+    }
+
+    #nav-btn:hover > *{
+        color: var(--main-color);
     }
 
     #nav-btn:hover > .text-icons{
-        height: 15px;
+        width: max-content;
+        text-align: center;
+    }
+
+    #home{
+        flex-flow: row nowrap ;
+    }
+
+    #home::before{
+        width: 40%;
+        height: 100vh;
+    }
+
+    #home::after{
+        right: 12%;
+        top:50vh;
+        z-index: 1;
+        font-size: 20rem;
+    }
+
+    #home .img-profile{
+        margin: auto;
+        margin-left: 20%;
+    }
+
+    #home .text-profile{
+        font-size: 2.1rem;
+        margin: auto 15px;
+        text-align: left;
+        z-index: 100;
+    }
+
+    #home .text-profile h2:nth-child(1){
+        font-size: 3.6rem;
+    }
+    
+    #home .text-profile h2:nth-child(2){
+        font-size: 3.6rem;
+    }
+
+    #sobremi .content-sobremi{
+    width: 55%;
+    }
+
+    #sobremi .content-sobremi .formacion{
+        position: absolute;
+        flex-flow: row nowrap;
+        margin: 30px;
+    }
+
+    #sobremi .content-sobremi .perfil span{
+        font-size: 2.5rem;
+    }    
+}
+
+@media only screen and (min-width:1281px) {
+    #home .img-profile{
+        margin: auto;
+        margin-left: 20%;
+    }
+
+    #home .text-profile{
+        font-size: 2.1rem;
+        margin: auto;
+        text-align: left;
+        z-index: 100;
+    }
+
+    #home .text-profile h2:nth-child(1){
+        font-size: 3.6rem;
+    }
+    
+    #home .text-profile h2:nth-child(2){
+        font-size: 3.6rem;
     }
 }
