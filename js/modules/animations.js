@@ -1,15 +1,3 @@
-export function scrolling(posY,element){
-    const ele = document.querySelector(element),
-    posEle = ele.getBoundingClientRect().bottom,
-    posBody = document.body.getBoundingClientRect().top;
-    
-    console.log((posEle+posBody),posEle,posBody)
-    if(posEle <= posY ){
-        ele.classList.remove("active");
-    }else{
-        ele.classList.add("active");
-    }
-}
 
 export const sobreMiChange=(nav)=>{
     document.addEventListener("click",(e)=>{

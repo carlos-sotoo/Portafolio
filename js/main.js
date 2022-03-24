@@ -1,6 +1,6 @@
 import hamburguer from "./modules/hamburguer-menu.js";
 import smoothScroll from "./modules/smooth-scroll.js";
-import {scrolling,sobreMiChange} from "./modules/animations.js";
+import {sobreMiChange} from "./modules/animations.js";
 import textdecore from "./modules/writeMachine.js"
 
 
