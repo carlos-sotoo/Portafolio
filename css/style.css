@@ -251,7 +251,8 @@ section{
 }
 
  #sobremi,
- #projects{
+ #projects,
+ #contact{
     flex-flow: column nowrap;
     padding-top: 60px;
     align-items: center;
