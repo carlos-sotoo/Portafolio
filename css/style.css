@@ -152,7 +152,7 @@ section{
 }
 
 #home{
-    padding-top: 60px;
+    padding-top: 0px;
     background-color: var(--main-color);
     flex-flow: column nowrap;
     align-items: center;
