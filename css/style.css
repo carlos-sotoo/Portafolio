@@ -164,7 +164,7 @@ section{
     content: "</>";
     top: 70vh;
     color: var(--second-color);
-    opacity: .45;
+    opacity: .3;
     font-size: 15rem;
     font-weight: 700;
     z-index: 1;
@@ -261,7 +261,7 @@ section .title{
     font-size: 4rem;
     color: var(--second-color);
     font-weight: 700;
-    opacity: .5;
+    opacity: .3;
 }
 
 #sobremi .content-sobremi{
