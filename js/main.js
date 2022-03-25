@@ -9,4 +9,6 @@ window.addEventListener("DOMContentLoaded",e=>{
     smoothScroll("#nav-btn");
     textdecore();
     sobreMiChange("#nav-sobremi");
+    const contactForm = document.contact;
+    contactForm.addEventListener("submit",(e)=>e.preventDefault())
 });
