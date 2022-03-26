@@ -184,53 +184,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-project">
-                    <img src="./images/Proyecto1-portafoli.png" alt="Proyecto: protafolio web"/>
-                    <div class="text-card flex-container">
-                        <span>Generador QR</span>
-                        <p>
-                            Permite generar y descargar un QR personalizado.
-                            <hr>
-                            Este proyecto fue desarrollado con:
-                            <ul>
-                                <li>
-                                    <figure>
-                                        <img src="./images/icons/react.svg" alt="React logo" class="logoSkills">
-                                        <figcaption>React JS</figcaption>
-                                    </figure>
-                                </li>
-                            </ul>
-                    
-                        </p>
-                        <div class="buttons">
-                            <a  class="btn-cv" href="" target="_blank">Ver codigo</a>
-                            <a  class="btn-cv" href="">Visitar pagina</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <section id="contact">
-            <h2 class="title">&#60;Contactos&#47;&#62;</h2>
-
-            <form name="contact" method="POST" action="" data-netlify="true">
-                <p>
-                  <label>Nombre: <input type="text" name="name" /></label>
-                </p>
-                <p>
-                  <label>Correo: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                  <label>Mensaje: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                    <label>Telefono: <input type="text" name="tel"/></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-
+            <h2 class="title">&#60;Contacto&#47;&#62;</h2>
+            <div class="container flex-container">
+                <form name="contact" method="POST" action="" data-netlify="true">
+                    <table>
+                        <tr>
+                            <td><label>Nombre:</label></td>
+                            <td><input type="text" name="name" placeholder="Nombre" autocomplete="off" required/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Correo:</label></td>
+                            <td><input type="email" name="email" placeholder="micorreo@correo.com" autocomplete="off" required/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Telefono:</label></td>
+                            <td><input type="tel" name="tel" placeholder="(opcional)" autocomplete="off"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Mensaje:</label></td>
+                            <td><textarea name="message" required placeholder="Escribe tu mensaje aqui..."></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit" class="btn-cv">Enviar</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label><output name="msg"></output></label></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </section>
 
     </main>

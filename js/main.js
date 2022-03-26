@@ -10,5 +10,9 @@ window.addEventListener("DOMContentLoaded",e=>{
     textdecore();
     sobreMiChange("#nav-sobremi");
     const contactForm = document.contact;
-    contactForm.addEventListener("submit",(e)=>e.preventDefault())
+    contactForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        contactForm.reset();
+        contactForm.msg.value="Mensaje enviado correctamente."
+    })
 });
