@@ -506,6 +506,7 @@ section .title{
     outline: none;
     background-color: rgba(132, 132, 148, 0.651);
 }
+
 #contact .container table textarea{
     width: 100%;
     height: 80px;
@@ -536,7 +537,6 @@ section .title{
     text-shadow: 2px 2px 3px #000;
     font-size: 2rem;
 }
-
 
 @media only screen and (min-width:700px) {
     header{
