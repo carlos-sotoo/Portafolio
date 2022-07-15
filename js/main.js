@@ -15,6 +15,9 @@ window.addEventListener("DOMContentLoaded", () => {
         if (e.target.matches('#nav-btn')) smoothScroll(e.target)
     })
 
+    document.addEventListener("load", smoothScroll(location.pathname.substring(1)))
+
+    console.log(location.pathname)
 
     /* 
         hamburguer(".menu-btn", ".menu");

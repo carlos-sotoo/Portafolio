@@ -1,6 +1,8 @@
-export default function smoothScroll(button) {
-  const href = button.dataset.value;
-  let offsetTop = document.getElementById(href).offsetTop;
+export default function smoothScroll(button, idsection) {
+  const value = button ? button.dataset.value : false;
+  const element = value ? value : idsection ? idsection : 'inicio'
+  console.log(value, element)
+  let offsetTop = document.getElementById(element).offsetTop;
   smoothScrollTo(0, offsetTop, 1500);
   history.pushState(null, href, `/${href === 'inicio' ? '' : href}`)
 }
