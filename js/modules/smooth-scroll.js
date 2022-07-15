@@ -1,4 +1,5 @@
 export default function smoothScroll(button, idsection) {
+  console.log(button, idsection)
   const value = button ? button.dataset.value : false;
   const element = value ? value : idsection ? idsection : 'inicio'
   let offsetTop = document.getElementById(element).offsetTop;
