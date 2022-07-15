@@ -14,7 +14,10 @@ window.addEventListener("DOMContentLoaded", () => {
         if (e.target.matches('.btn-dark-mode') || e.target.parentNode.matches('.btn-dark-mode'))
             darkMode('.btn-dark-mode')
         /* EVENTO SMOOTH SCROLL AL PRESIONAR MENU DE NAVEGACION */
-        if (e.target.matches('#nav-btn')) smoothScroll(e.target)
+
+        if (e.target.matches('#nav-btn') || e.target.parentNode.matches('#nav-btn')) {
+            smoothScroll(e.target.matches('#nav-btn') ? e.target : e.target.parentNode)
+        }
     })
 
     /* EVENTO SMOOTH SCROLL AL INGRESAR POR UN PATH */

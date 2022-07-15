@@ -1,9 +1,8 @@
 export default function smoothScroll(button) {
   const value = typeof button !== 'string' ? button.dataset.value : button;
   const offsetTop = document.getElementById(value || 'inicio').offsetTop;
-
   smoothScrollTo(0, offsetTop, 1500);
-  history.pushState(null, value, `/${value}`)
+  history.pushState(null, value, `/${value === 'inicio' ? '' : value}`)
 }
 
 function smoothScrollTo(endX, endY, duration) {
