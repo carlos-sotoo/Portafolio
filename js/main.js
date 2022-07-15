@@ -17,7 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("load", smoothScroll(location.pathname.substring(1)))
 
-    console.log(location.pathname)
 
     /* 
         hamburguer(".menu-btn", ".menu");
