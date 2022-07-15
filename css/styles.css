@@ -142,7 +142,7 @@ img {
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #ffefdc;
+  background-color: #eeeae4;
   color: #20202c;
   transition: all 0.5s ease-in-out;
 }
@@ -274,7 +274,7 @@ body header .btn-dark-mode .fa-solid {
   top: 1px;
   right: 1px;
   left: auto;
-  background-color: #ffefdc;
+  background-color: #eeeae4;
   color: #20202c;
   line-height: 23px;
   width: 23px;
@@ -292,15 +292,15 @@ body section {
 body.dark-mode {
   /* Dark Mode styles */
   background-color: #20202c;
-  color: #ffefdc;
+  color: #eeeae4;
   transition: all 0.5s ease-in-out;
 }
 body.dark-mode header nav a#nav-btn {
-  color: #ffefdc;
+  color: #eeeae4;
 }
 body.dark-mode header .btn-dark-mode .fa-solid {
   background-color: #20202c;
-  color: #ffefdc;
+  color: #eeeae4;
   -webkit-transform: translateX(-25px);
           transform: translateX(-25px);
   transition: all 0.5s ease-in-out;
