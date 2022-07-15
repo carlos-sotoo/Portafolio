@@ -2,18 +2,50 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portafolio | Carlos Fernando Soto</title>
+  <title>Portafolio</title>
+  <meta name='description'
+    content='Mi portafolio web, donde encontraras información sobre mi, mis proyectos y mis contactos.' />
+  <meta name='keyword'
+    content='Next js, React js, Javascript, HTML, CSS, Node Js, Express, Desarrollo web, Frontend, Backend, Fullstack, MERN' />
+  <meta name='author' content='Carlos Fernando Soto Chaguala' />
+  <link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/c1ce6578e2.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
+<body class="dark-mode">
+  <header>
+    <nav>
+      <a href="" id="nav-btn" data-value="inicio">inicio</a>
+      <a href="" id="nav-btn" data-value="sobre-mi">sobre mi</a>
+      <a href="" id="nav-btn" data-value="proyectos">proyectos</a>
+      <a href="" id="nav-btn" data-value="contacto">contacto</a>
+    </nav>
+    <button class="btn-dark-mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </header>
+  <main>
+    <section id="inicio">
+      <h1>Inicio</h1>
+    </section>
+    <section id="sobre-mi">
+      <h1>Sobre mi</h1>
+    </section>
+    <section id="proyectos">
+      <h1>Proyectos</h1>
+    </section>
+    <section id="contacto">
+      <h1>Contacto</h1>
+    </section>
+  </main>
+  <!-- 
   <header class="flex-container">
     <img src="images/CarlosSoto.svg" alt="Carlos Soto" class="svgName">
     <nav class="flex-container menu">
@@ -48,7 +80,7 @@
         <h2>Hola</h2>
         <h2>Soy Carlos Soto</h2>
         <a class="typewrite" data-period="2000"
-          data-type='["Bienvenido a mi portafolio.","Web Developer.","Frontend Developer.","Web Designer."]'>
+          data-type='["Bienvenido a mi portafolio.","Web Developer.","Frontend Developer.","Systems Engineer"]'>
           <span class="wrap"></span>
         </a>
         <div class="social-network">
@@ -265,7 +297,7 @@
       </div>
     </section>
 
-  </main>
+  </main> -->
   <script src="js/main.js" type="module"></script>
 </body>
 

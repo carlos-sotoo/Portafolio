@@ -1,14 +1,8 @@
-export default function smoothScroll(buttons){
-    const $btns = document.querySelectorAll(buttons);
-    
-    $btns.forEach((btn)=>{
-        btn.addEventListener('click',(e)=>{
-            e.preventDefault();
-            const href = btn.getAttribute('href');
-            let offsetTop = document.querySelector(href).offsetTop;
-            smoothScrollTo(0, offsetTop,1500);
-        })
-    });
+export default function smoothScroll(button) {
+  const href = button.dataset.value;
+  let offsetTop = document.getElementById(href).offsetTop;
+  smoothScrollTo(0, offsetTop, 1500);
+  history.pushState(null, href, `/${href}`)
 }
 
 function smoothScrollTo(endX, endY, duration) {
