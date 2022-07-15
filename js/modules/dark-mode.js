@@ -1,18 +1,26 @@
-export const darkMode = (classBtn) => {
-  const btn = classBtn ? document.querySelector(classBtn) : false
-  const theme_mode = localStorage.getItem('theme') || 'light'
-  console.log(theme_mode)
+export const darkMode = (value) => {
+  const body = document.body
+  const btnIcon = document.querySelector('.icon-mode')
 
-  if (theme_mode === 'dark' || btn.firstElementChild.matches('.fa-moon')) {
-    btn.firstElementChild.classList.remove('fa-moon')
-    btn.firstElementChild.classList.add('fa-sun')
-    document.body.classList.toggle('dark-mode')
+  body.setAttribute('data-theme', localStorage.getItem('theme'))
+
+  if (value) {
+    const theme = body.getAttribute("data-theme") === 'light' ? 'dark' : 'light'
+    body.setAttribute('data-theme', theme)
+  }
+
+
+  if (body.getAttribute('data-theme') === 'dark') {
+    btnIcon.classList.remove('fa-moon')
+    btnIcon.classList.add('fa-sun')
     localStorage.setItem('theme', 'dark')
+    console.log('dark')
+
   } else {
-    btn.firstElementChild.classList.remove('fa-sun')
-    btn.firstElementChild.classList.add('fa-moon')
-    document.body.classList.toggle('dark-mode')
+    btnIcon.classList.remove('fa-sun')
+    btnIcon.classList.add('fa-moon')
     localStorage.setItem('theme', 'light')
+    console.log('light');
   }
 
 }

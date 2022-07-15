@@ -289,16 +289,16 @@ body section {
   padding-top: 50px;
   min-height: calc(100vh - 50px);
 }
-body.dark-mode {
+body[data-theme=dark] {
   /* Dark Mode styles */
   background-color: #20202c;
   color: #eeeae4;
   transition: all 0.5s ease-in-out;
 }
-body.dark-mode header nav a#nav-btn {
+body[data-theme=dark] header nav a#nav-btn {
   color: #eeeae4;
 }
-body.dark-mode header .btn-dark-mode .fa-solid {
+body[data-theme=dark] header .btn-dark-mode .fa-solid {
   background-color: #20202c;
   color: #eeeae4;
   -webkit-transform: translateX(-25px);

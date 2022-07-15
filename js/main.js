@@ -6,13 +6,17 @@ import { darkMode } from "./modules/dark-mode.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("load", () => {
+        darkMode(false)
+        smoothScroll(location.pathname.substring(1))
+    })
 
     /* EVENTOS DE CLICK */
     document.addEventListener("click", e => {
         e.preventDefault()
         /* EVENTO MODO OSCURO Y CLARO */
         if (e.target.matches('.btn-dark-mode') || e.target.parentNode.matches('.btn-dark-mode'))
-            darkMode('.btn-dark-mode')
+            darkMode(true)
         /* EVENTO SMOOTH SCROLL AL PRESIONAR MENU DE NAVEGACION */
 
         if (e.target.matches('#nav-btn') || e.target.parentNode.matches('#nav-btn')) {
@@ -21,11 +25,6 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     /* EVENTO SMOOTH SCROLL AL INGRESAR POR UN PATH */
-    document.addEventListener("load", () => {
-        darkMode()
-        console.log("hola")
-        smoothScroll(location.pathname.substring(1))
-    })
 
 
     /* 
