@@ -1,10 +1,9 @@
-export default function smoothScroll(button, idsection) {
-  console.log(button, idsection)
-  const value = button ? button.dataset.value : false;
-  const element = value ? value : idsection ? idsection : 'inicio'
-  let offsetTop = document.getElementById(element).offsetTop;
+export default function smoothScroll(button) {
+  const value = typeof button !== 'string' ? button.dataset.value : button;
+  const offsetTop = document.getElementById(value || 'inicio').offsetTop;
+
   smoothScrollTo(0, offsetTop, 1500);
-  history.pushState(null, element, `/${element === 'inicio' ? '' : element}`)
+  history.pushState(null, value, `/${value}`)
 }
 
 function smoothScrollTo(endX, endY, duration) {
