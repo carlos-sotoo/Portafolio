@@ -1,1 +1,306 @@
-@import"https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;700&display=swap";html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-decoration:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}img{max-width:100%}body{width:100%;min-height:100vh;background-color:#ffefdc;color:#20202c;transition:all .5s ease-in-out}body header{position:fixed;height:50px;top:0;left:0;display:flex;flex-flow:row nowrap;width:100%;z-index:9999}body section{padding-top:50px;min-height:calc(100vh - 50px)}body.dark-mode{background-color:#20202c;color:#ffefdc;transition:all .5s ease-in-out}/*# sourceMappingURL=styles.css.map */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Yellowtail&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffefdc;
+  color: #20202c;
+  transition: all 0.5s ease-in-out;
+}
+body header {
+  position: fixed;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 50px;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  width: 100%;
+  z-index: 9999;
+}
+body header .logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  gap: 10px;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100%;
+  margin-left: 15px;
+}
+body header .logo svg {
+  height: 70%;
+}
+body header .logo svg .cls-1 {
+  isolation: isolate;
+}
+body header .logo svg .cls-2 {
+  fill: #048abf;
+  transition: all 0.5s ease-in-out;
+}
+body header .logo svg .cls-3 {
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+}
+body header .logo svg .cls-4 {
+  mix-blend-mode: darken;
+  opacity: 0.36;
+}
+body header .logo svg .cls-5 {
+  -webkit-mask: url(#mask-2);
+          mask: url(#mask-2);
+}
+body header .logo svg .cls-6 {
+  -webkit-filter: url(#luminosity-invert);
+          filter: url(#luminosity-invert);
+}
+body header .logo .name {
+  font-size: 2.2rem;
+  font-family: "Yellowtail", cursive;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.658);
+}
+body header .logo .name span {
+  color: #048abf;
+}
+body header nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  width: 270px;
+}
+body header nav a#nav-btn {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  gap: 5px;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 40px;
+  color: #20202c;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+body header nav a#nav-btn i {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s ease-in-out;
+}
+body header nav a#nav-btn .nav-txt {
+  font-size: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+body header nav a#nav-btn:hover i {
+  transition: all 0.5s ease-in-out;
+  background-color: #048abf;
+}
+body header nav a#nav-btn:hover .nav-txt {
+  border-bottom: 4px solid #048abf;
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
+}
+body header .btn-dark-mode {
+  position: relative;
+  background-color: rgba(133, 133, 133, 0.7137254902);
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  border-radius: 15px;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+body header .btn-dark-mode .fa-solid {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  left: auto;
+  background-color: #ffefdc;
+  color: #20202c;
+  line-height: 23px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  font-size: 1rem;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+body section {
+  padding-top: 50px;
+  min-height: calc(100vh - 50px);
+}
+body.dark-mode {
+  /* Dark Mode styles */
+  background-color: #20202c;
+  color: #ffefdc;
+  transition: all 0.5s ease-in-out;
+}
+body.dark-mode header nav a#nav-btn {
+  color: #ffefdc;
+}
+body.dark-mode header .btn-dark-mode .fa-solid {
+  background-color: #20202c;
+  color: #ffefdc;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+  transition: all 0.5s ease-in-out;
+}
