@@ -21,7 +21,11 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     /* EVENTO SMOOTH SCROLL AL INGRESAR POR UN PATH */
-    document.addEventListener("load", smoothScroll(location.pathname.substring(1)))
+    document.addEventListener("load", () => {
+        darkMode()
+        console.log("hola")
+        smoothScroll(location.pathname.substring(1))
+    })
 
 
     /* 
