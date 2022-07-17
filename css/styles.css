@@ -405,6 +405,7 @@ body section.inicio .text-profile {
       flex: 1;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   -ms-flex-align: center;
