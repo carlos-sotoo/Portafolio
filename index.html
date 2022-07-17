@@ -72,6 +72,10 @@
         <i class='fa-solid fa-user'></i>
         <div class='nav-txt'>Sobre mi</div>
       </a>
+      <a href='' id='nav-btn' data-value='habilidades'>
+        <i class='fa-solid fa-pen-ruler'></i>
+        <div class='nav-txt'>Habilidades</div>
+      </a>
       <a href='' id='nav-btn' data-value='proyectos'>
         <i class='fa-solid fa-briefcase'></i>
         <div class='nav-txt'>Proyectos</div>
@@ -95,7 +99,6 @@
 
       <!-- IMAGEN DE PERFIL DE INICIO -->
       <div class='img-profile'>
-        <div class='blob'></div>
         <img src='./images/perfil.png' alt='profile photo'>
       </div>
 
@@ -111,18 +114,71 @@
           data-type='Bienvenido a mi portafolio., Desarrollador Web., Desarrollador Frontend., Ingeniero de sistemas.'>
           <span class='wrap'></span>
         </a>
-        <!-- <div class='social-network'>
-          <a href='https://www.facebook.com/CarlosSotoCh95/' target='_blank'><i class='fab fa-facebook-square'></i></a>
-          <a href='https://www.instagram.com/_.carlossoto._/' target='_blank'><i class='fab fa-instagram'></i></a>
-          <a href='https://www.linkedin.com/in/carlossotoch/' target='_blank'><i class='fab fa-linkedin-in'></i></a>
-          <a href='https://github.com/carlos-sotoo/' target='_blank'><i class='fab fa-github'></i></a>
-        </div> -->
+        <a href="/images/Hoja de vida.pdf" download="cv_Carlos_Soto" class="btn-cv">Descargar CV</a>
       </div>
     </section>
 
     <!-- SECCION DE SOBRE MI -->
     <section class='sobre-mi' id='sobre-mi'>
-      <h1>Sobre mi</h1>
+      <!-- IMAGEN DE PERFIL DE SOBRE MI -->
+      <div class='img-sobre-mi'>
+        <img src='./images/foto.png' alt='profile photo'>
+      </div>
+
+      <div class="txt-sobre-mi">
+        <article class="perfil">
+          <div class="border">
+            <h3>Sobre mi</h3>
+            <p>
+              Mi nombre es Carlos Fernando Soto Chaguala. Soy una persona responsable, puntual y muy comprometida
+              con las labores que se me asignan, aprendo con rapidez y
+              facilidad. Me gusta asumir nuevos retos para motivarme a
+              seguir creciendo profesionalmente, también soy una
+              persona organizada.
+            </p>
+          </div>
+        </article>
+
+        <article class="formacion">
+          <div class="border">
+            <h3>Formación Academica</h3>
+            <ul class="profesional">
+              <li>
+                <h4>Ingeniería de sistemas y computación</h4>
+                Universidad Tecnológica de Pereira
+              </li>
+              <li>
+                <h4>Técnico en diseño y desarrollo web</h4>
+                Instituto técnico superior de Pereira
+              </li>
+              <li>
+                <h4>Bachiller técnico</h4>
+                Instituto técnico superior de Pereira
+              </li>
+            </ul>
+            <ul class="cursos">
+              <h3>Cursos</h3>
+              <li>
+                <h4>Desarrollo web HTML, CSS, Javascript</h4>
+                Coursera - University of Michigan
+              </li>
+              <li>
+                <h4>Curso Javascript</h4>
+                Youtube - Jon Mircha
+              </li>
+              <li>
+                <h4>Fullstack Web developer</h4>
+                Full Stack Open 2021
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCION DE HABILIDADES Y HERRAMIENTAS -->
+    <section class='habilidades' id='habilidades'>
+      <h1>habilidades</h1>
     </section>
     <!-- SECCION DE PROYECTOS -->
     <section class='proyectos' id='proyectos'>
@@ -134,51 +190,7 @@
     </section>
   </main>
   <!-- 
-  <header class='flex-container'>
-    <img src='images/CarlosSoto.svg' alt='Carlos Soto' class='svgName'>
-    <nav class='flex-container menu'>
-      <a href='#home' class='' id='nav-btn'>
-        <i class='fas fa-home'></i>
-        <span class='text-icons'>Inicio</span>
-      </a>
-      <a href='#sobremi' id='nav-btn'>
-        <i class='fas fa-user-alt"></i>
-        <span class="text-icons">Sobre mí</span>
-      </a>
-      <a href="#projects" id="nav-btn">
-        <i class="fas fa-briefcase"></i>
-        <span class="text-icons">Proyectos</span>
-      </a>
-      <a href="#contact" id="nav-btn">
-        <i class="fas fa-phone-alt"></i>
-        <span class="text-icons">Contacto</span>
-      </a>
-    </nav>
-  </header>
-  <main>
-    <button class="menu-btn">
-      <span class="menu-span"></span>
-    </button>
-
-    <section id="home">
-      <div class="img-profile">
-        <img src="./images/foto.png" alt="profile photo">
-      </div>
-      <div class="text-profile flex-container">
-        <h2>Hola</h2>
-        <h2>Soy Carlos Soto</h2>
-        <a class="typewrite" data-period="2000"
-          data-type='["Bienvenido a mi portafolio.","Web Developer.","Frontend Developer.","Systems Engineer"]'>
-          <span class="wrap"></span>
-        </a>
-        <div class="social-network">
-          <a href="https://www.facebook.com/CarlosSotoCh95/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-          <a href="https://www.instagram.com/_.carlossoto._/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/carlossotoch/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/carlos-sotoo/" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-    </section>
+  
 
     <section id="sobremi">
       <h2 class="title">&#60;Sobre mí&#47;&#62;</h2>
@@ -384,7 +396,12 @@
         </form>
       </div>
     </section>
-
+<div class='social-network'>
+<a href='https://www.facebook.com/CarlosSotoCh95/' target='_blank'><i class='fab fa-facebook-square'></i></a>
+<a href='https://www.instagram.com/_.carlossoto._/' target='_blank'><i class='fab fa-instagram'></i></a>
+<a href='https://www.linkedin.com/in/carlossotoch/' target='_blank'><i class='fab fa-linkedin-in'></i></a>
+<a href='https://github.com/carlos-sotoo/' target='_blank'><i class='fab fa-github'></i></a>
+</div> 
   </main> -->
   <script src="js/main.js" type="module"></script>
 </body>

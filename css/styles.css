@@ -180,7 +180,7 @@ body header .btn-menu span {
   display: block;
   margin: auto;
   position: relative;
-  width: 30px;
+  width: 40px;
   height: 4px;
   background-color: #eeeae4;
   transition: all 0.3s ease-in-out;
@@ -190,7 +190,7 @@ body header .btn-menu span::after {
   display: block;
   margin: auto;
   content: "";
-  width: 30px;
+  width: 40px;
   height: 4px;
   background-color: #eeeae4;
   bottom: 8px;
@@ -201,7 +201,7 @@ body header .btn-menu span::before {
   display: block;
   margin: auto;
   content: "";
-  width: 30px;
+  width: 40px;
   height: 4px;
   background-color: #eeeae4;
   top: 8px;
@@ -275,7 +275,8 @@ body header nav {
       flex-flow: row nowrap;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-  width: 270px;
+  width: 350px;
+  margin-left: -50px;
 }
 body header nav a#nav-btn {
   display: -ms-flexbox;
@@ -488,6 +489,91 @@ body section.inicio .text-profile .typewrite .wrap {
   }
   body section.inicio .text-profile .typewrite {
     font-size: 1.5rem;
+  }
+}
+body section.sobre-mi {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+body section.sobre-mi .img-sobre-mi {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+body section.sobre-mi .img-sobre-mi img {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+}
+body section.sobre-mi .txt-sobre-mi {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+body section.sobre-mi .txt-sobre-mi .perfil,
+body section.sobre-mi .txt-sobre-mi .formacion {
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #048abf;
+  border-radius: 10px;
+  color: #eeeae4;
+}
+body section.sobre-mi .txt-sobre-mi .perfil .border,
+body section.sobre-mi .txt-sobre-mi .formacion .border {
+  border: 2px dashed #eeeae4;
+  border-radius: 10px;
+  padding: 10px;
+}
+body section.sobre-mi .txt-sobre-mi .perfil .border h3,
+body section.sobre-mi .txt-sobre-mi .formacion .border h3 {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #20202c;
+}
+body section.sobre-mi .txt-sobre-mi .perfil .border p,
+body section.sobre-mi .txt-sobre-mi .formacion .border p {
+  margin-left: 5px;
+}
+body section.sobre-mi .txt-sobre-mi .perfil .border ul li,
+body section.sobre-mi .txt-sobre-mi .formacion .border ul li {
+  margin: 7px 5px;
+}
+body section.sobre-mi .txt-sobre-mi .perfil .border ul li h4,
+body section.sobre-mi .txt-sobre-mi .formacion .border ul li h4 {
+  font-weight: bold;
+  margin: 2px 0;
+}
+body section.sobre-mi .txt-sobre-mi .formacion {
+  min-width: 340px;
+}
+body section.sobre-mi .txt-sobre-mi .perfil {
+  min-width: 420px;
+}
+@media screen and (max-width: 580px) {
+  body section.sobre-mi .txt-sobre-mi {
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+  }
+}
+@media screen and (max-width: 930px) {
+  body section.sobre-mi {
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    gap: 20px;
   }
 }
 body[data-theme=dark] {
