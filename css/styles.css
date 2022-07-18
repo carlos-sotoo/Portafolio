@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -146,6 +147,16 @@ body {
   color: #20202c;
   transition: all 0.5s ease-in-out;
   /*-------------- DARK MODE----------- */
+}
+body .content-text {
+  color: #eeeae4;
+  background-color: #048abf;
+  border-radius: 10px;
+  padding: 10px;
+}
+body .content-text div {
+  border-radius: 10px;
+  border: 2px dashed #eeeae4;
 }
 body header {
   position: fixed;
@@ -323,7 +334,7 @@ body header nav a#nav-btn:hover .nav-txt {
   body header nav {
     position: fixed;
     top: -100%;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(238, 234, 228, 0.568627451);
@@ -422,24 +433,10 @@ body section.inicio .text-profile .content-name {
   height: fit-content;
 }
 body section.inicio .text-profile .content-name .name {
-  display: block;
-  color: #eeeae4;
   font-size: 4rem;
   font-family: "Yellowtail", cursive;
-  padding: 10px;
-  padding-right: 14px;
-  background-color: #048abf;
-  border-radius: 10px;
-}
-body section.inicio .text-profile .content-name .name span {
-  word-wrap: normal;
-  border-radius: 10px;
-  display: block;
-  margin: auto;
-  width: 100%;
-  background-color: #048abf;
+  color: #eeeae4;
   text-align: center;
-  border: 2px dashed #eeeae4;
 }
 body section.inicio .text-profile .typewrite {
   font-size: 2rem;
@@ -450,6 +447,35 @@ body section.inicio .text-profile .typewrite .wrap {
   border-right: 2px solid #20202c;
   -webkit-animation: wrap 0.2s ease-in infinite;
           animation: wrap 0.2s ease-in infinite;
+}
+body section.inicio .text-profile .btn-cv {
+  height: 40px;
+  width: 130px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #048abf;
+  color: #eeeae4;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0 10px;
+  box-shadow: 1px 2px 3px #000;
+  border: none;
+  cursor: pointer;
+}
+body section.inicio .text-profile .btn-cv .icon {
+  font-size: 1.1rem;
+  margin-left: -10px;
+  width: 30px;
+  border-right: 1px solid #0a74b1;
+  transition: all 200ms linear;
+}
+body section.inicio .text-profile .btn-cv:hover {
+  opacity: 0.8;
+}
+body section.inicio .text-profile .btn-cv:hover .icon {
+  width: 100%;
+  border-right: 0px solid #0a74b1;
 }
 @-webkit-keyframes wrap {
   0% {
@@ -512,62 +538,61 @@ body section.sobre-mi .img-sobre-mi img {
   max-width: 400px;
   width: 100%;
 }
+@media screen and (max-width: 580px) {
+  body section.sobre-mi .img-sobre-mi img {
+    width: 60%;
+  }
+}
 body section.sobre-mi .txt-sobre-mi {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
   -ms-flex-pack: center;
       justify-content: center;
   font-family: "Open Sans", sans-serif;
 }
 body section.sobre-mi .txt-sobre-mi .perfil,
 body section.sobre-mi .txt-sobre-mi .formacion {
-  max-width: 400px;
-  padding: 10px;
   margin: 10px;
-  background-color: #048abf;
-  border-radius: 10px;
-  color: #eeeae4;
+  line-height: 17px;
+  word-spacing: 2px;
+  max-width: 340px;
+  min-width: 280px;
 }
-body section.sobre-mi .txt-sobre-mi .perfil .border,
-body section.sobre-mi .txt-sobre-mi .formacion .border {
-  border: 2px dashed #eeeae4;
-  border-radius: 10px;
-  padding: 10px;
+body section.sobre-mi .txt-sobre-mi .perfil div,
+body section.sobre-mi .txt-sobre-mi .formacion div {
+  padding: 5px;
 }
-body section.sobre-mi .txt-sobre-mi .perfil .border h3,
-body section.sobre-mi .txt-sobre-mi .formacion .border h3 {
+body section.sobre-mi .txt-sobre-mi .perfil div h3,
+body section.sobre-mi .txt-sobre-mi .formacion div h3 {
   margin: 5px 0;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font: normal 2rem "Yellowtail", cursive;
   color: #20202c;
+  text-align: center;
 }
-body section.sobre-mi .txt-sobre-mi .perfil .border p,
-body section.sobre-mi .txt-sobre-mi .formacion .border p {
+body section.sobre-mi .txt-sobre-mi .perfil div p,
+body section.sobre-mi .txt-sobre-mi .formacion div p {
   margin-left: 5px;
 }
-body section.sobre-mi .txt-sobre-mi .perfil .border ul li,
-body section.sobre-mi .txt-sobre-mi .formacion .border ul li {
+body section.sobre-mi .txt-sobre-mi .perfil div ul li,
+body section.sobre-mi .txt-sobre-mi .formacion div ul li {
   margin: 7px 5px;
 }
-body section.sobre-mi .txt-sobre-mi .perfil .border ul li h4,
-body section.sobre-mi .txt-sobre-mi .formacion .border ul li h4 {
+body section.sobre-mi .txt-sobre-mi .perfil div ul li h4,
+body section.sobre-mi .txt-sobre-mi .formacion div ul li h4 {
   font-weight: bold;
   margin: 2px 0;
-}
-body section.sobre-mi .txt-sobre-mi .formacion {
-  min-width: 340px;
-}
-body section.sobre-mi .txt-sobre-mi .perfil {
-  min-width: 420px;
 }
 @media screen and (max-width: 580px) {
   body section.sobre-mi .txt-sobre-mi {
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
+  }
+  body section.sobre-mi .txt-sobre-mi .img-sobre-mi img {
+    width: 50vw;
   }
 }
 @media screen and (max-width: 930px) {
@@ -576,6 +601,52 @@ body section.sobre-mi .txt-sobre-mi .perfil {
         flex-flow: column nowrap;
     gap: 20px;
   }
+}
+body section.habilidades {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  gap: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+body section.habilidades .frontend,
+body section.habilidades .backend,
+body section.habilidades .others {
+  width: 250px;
+}
+body section.habilidades article div {
+  height: calc(100% - 24px);
+  padding: 10px;
+  text-align: center;
+}
+body section.habilidades article div h3 {
+  font: normal 1.8rem "Yellowtail", cursive;
+}
+body section.habilidades article div .icon {
+  font-size: 2rem;
+  background-color: #20202c;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+}
+body section.habilidades article div ul {
+  text-align: left;
+  line-height: 20px;
+}
+body section.habilidades article div ul li::before {
+  content: "✓";
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 7px;
 }
 body[data-theme=dark] {
   /* Dark Mode styles */

@@ -14,18 +14,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     /* EVENTOS DE CLICK */
     document.addEventListener('click', e => {
-        e.preventDefault()
         /* EVENTO MODO OSCURO Y CLARO */
-        if (e.target.matches('.btn-dark-mode') || e.target.matches('.btn-dark-mode *'))
+        if (e.target.matches('.btn-dark-mode') || e.target.matches('.btn-dark-mode *')) {
+            e.preventDefault()
             darkMode(true)
+        }
         /* EVENTO SMOOTH SCROLL AL PRESIONAR MENU DE NAVEGACION */
 
         if (e.target.matches('#nav-btn') || e.target.matches('#nav-btn *')) {
+            e.preventDefault()
             smoothScroll(e.target.matches('#nav-btn') ? e.target : e.target.parentNode)
             hamburguer('.btn-menu', '.menu')
         }
         /*EVENTO MENU DE HAMBURGUESA*/
         if (e.target.matches('.btn-menu') || e.target.matches('.btn-menu *')) {
+            e.preventDefault()
             hamburguer('.btn-menu', '.menu')
         }
     })
