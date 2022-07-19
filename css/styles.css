@@ -212,12 +212,9 @@ body header {
 }
 body header .btn-menu {
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #048abf;
-  position: fixed;
-  right: 10px;
-  top: 50px;
   border: none;
   border-radius: 50%;
   z-index: 2000;
@@ -227,7 +224,7 @@ body header .btn-menu span {
   display: block;
   margin: auto;
   position: relative;
-  width: 40px;
+  width: 30px;
   height: 4px;
   background-color: #eeeae4;
   transition: all 0.3s ease-in-out;
@@ -237,7 +234,7 @@ body header .btn-menu span::after {
   display: block;
   margin: auto;
   content: "";
-  width: 40px;
+  width: 30px;
   height: 4px;
   background-color: #eeeae4;
   bottom: 8px;
@@ -248,7 +245,7 @@ body header .btn-menu span::before {
   display: block;
   margin: auto;
   content: "";
-  width: 40px;
+  width: 30px;
   height: 4px;
   background-color: #eeeae4;
   top: 8px;
@@ -664,13 +661,15 @@ body section.proyectos .frontend .container,
 body section.proyectos .backend .container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   -ms-flex-pack: center;
       justify-content: center;
   gap: 20px;
 }
 body section.proyectos .frontend .container .card-project,
 body section.proyectos .backend .container .card-project {
-  width: 260px;
+  min-width: 260px;
   overflow: hidden;
 }
 body section.proyectos .frontend .container .card-project .border,
