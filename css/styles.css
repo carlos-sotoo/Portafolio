@@ -773,6 +773,53 @@ body section.proyectos .frontend .container .card-project:hover .border .text-ca
 body section.proyectos .backend .container .card-project:hover .border .text-card {
   top: -12px;
 }
+body section.contacto {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 20px;
+}
+body section.contacto .icon {
+  width: 50px;
+  height: 50px;
+  font-size: 2.1rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 54px;
+  outline: 2px solid #20202c;
+  color: #20202c;
+  transition: all 0.2s ease-in-out;
+}
+body section.contacto .icon:hover {
+  outline-offset: 4px;
+}
+body section.contacto .icon:hover.instagram {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  outline-color: #a02d76;
+}
+body section.contacto .icon:hover.linkedin {
+  background-color: #007bb6;
+  outline-color: #007bb6;
+}
+body section.contacto .icon:hover.whatsapp {
+  background-color: #56c964;
+  outline-color: #56c964;
+}
+body section.contacto .icon:hover.github {
+  background-color: #51277b;
+  outline-color: #51277b;
+}
+body section.contacto .icon:hover.email {
+  background-color: #e04c40;
+  outline-color: #e04c40;
+}
+body section.contacto .icon:hover.codepen {
+  background-color: #2fdf84;
+  outline-color: #2fdf84;
+}
 body[data-theme=dark] {
   /* Dark Mode styles */
   background-color: #20202c;
@@ -804,4 +851,8 @@ body[data-theme=dark] header .btn-dark-mode .fa-solid {
 body[data-theme=dark] section.inicio .text-profile h2.name {
   background-color: #048abf;
   color: #20202c;
+}
+body[data-theme=dark] section.contacto .icon {
+  outline: 2px solid #eeeae4;
+  color: #eeeae4;
 }
