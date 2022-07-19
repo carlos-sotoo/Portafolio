@@ -3,6 +3,7 @@ import smoothScroll from './modules/smooth-scroll.js'
 import { sobreMiChange } from './modules/animations.js'
 import textdecore from './modules/writeMachine.js'
 import { darkMode } from './modules/dark-mode.js'
+import { showProjects } from './modules/show-projects.js'
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
         darkMode(false)
         smoothScroll(location.pathname.substring(1))
         textdecore()
+        showProjects()
     })
 
     /* EVENTOS DE CLICK */

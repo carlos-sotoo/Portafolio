@@ -12,7 +12,7 @@
   <meta name='keyword'
     content='Next js, React js, Javascript, HTML, CSS, Node Js, Express, Desarrollo web, Frontend, Backend, Fullstack, MERN' />
   <meta name='author' content='Carlos Fernando Soto Chaguala' />
-  <link rel='shortcut icon' href='./images/icons/favicon.ico' type='image/x-icon'>
+  <link rel='shortcut icon' href='./assets/images/icons/favicon.ico' type='image/x-icon'>
 
   <link rel='stylesheet' href='css/styles.css'>
   <script src='https://kit.fontawesome.com/c1ce6578e2.js' crossorigin='anonymous'></script>
@@ -99,7 +99,7 @@
 
       <!-- IMAGEN DE PERFIL DE INICIO -->
       <div class='img-profile'>
-        <img src='./images/perfil.png' alt='profile photo'>
+        <img src='./assets/images/perfil.png' alt='profile photo'>
       </div>
 
       <!-- TEXTO CONTENIDO EN INICIO -->
@@ -107,7 +107,7 @@
       <div class='text-profile'>
         <div class="content-name">
           <h2 class="name content-text">
-            <div>Carlos Fernando Soto</div>
+            <div class="border">Carlos Fernando Soto</div>
           </h2>
         </div>
         <a class='typewrite'
@@ -125,12 +125,12 @@
     <section class='sobre-mi' id='sobre-mi'>
       <!-- IMAGEN DE PERFIL DE SOBRE MI -->
       <div class='img-sobre-mi'>
-        <img src='./images/foto.png' alt='profile photo'>
+        <img src='./assets/images/foto.png' alt='profile photo'>
       </div>
 
       <div class="txt-sobre-mi">
         <article class="perfil content-text">
-          <div>
+          <div class="border">
             <h3>Sobre mi</h3>
             <p>
               Mi nombre es Carlos Fernando Soto Chaguala. Soy una persona responsable, puntual y muy comprometida
@@ -143,7 +143,7 @@
         </article>
 
         <article class="formacion content-text">
-          <div>
+          <div class="border">
             <h3>Formación Academica</h3>
             <ul class="profesional">
               <li>
@@ -183,7 +183,7 @@
     <section class='habilidades' id='habilidades'>
       <!-- SECION DE HERRAMIENTAS FRONTEND -->
       <article class="frontend content-text">
-        <div>
+        <div class="border">
           <i class="icon fa-solid fa-laptop-code"></i>
           <h3>Frontend</h3>
           <ul>
@@ -201,7 +201,7 @@
 
       <!-- SECION DE HERRAMIENTAS BACKEND -->
       <article class="backend content-text">
-        <div>
+        <div class="border">
           <i class="icon fa-solid fa-database"></i>
           <h3>Backend</h3>
           <ul>
@@ -215,7 +215,7 @@
 
       <!-- SECION DE HERRAMIENTAS OTRAS -->
       <article class="others content-text">
-        <div>
+        <div class="border">
           <i class="icon fa-solid fa-mug-saucer"></i>
           <h3>Conocimientos tecnicos</h3>
           <ul>
@@ -236,113 +236,73 @@
     </section>
     <!-- SECCION DE PROYECTOS -->
     <section class='proyectos' id='proyectos'>
-      <h1>Proyectos</h1>
+
+      <!-- PROYECTOS FRONTEND -->
+      <div class="frontend">
+        <h2>Proyectos Frontend</h2>
+        <!-- AQUI VAN TODOS LOS PROYECTOS FRONTEND -->
+        <div class="container">
+
+
+
+
+
+        </div>
+      </div>
+
+      <!-- PROYECTOS BACKEND -->
+      <div class="backend">
+        <h2>Proyectos Backend</h2>
+        <!-- AQUI VAN TODOS LOS PROYECTOS BACKEND -->
+        <div class="container">
+          Aqui van los proyectos backend
+        </div>
+      </div>
     </section>
     <!-- SECCION DE CONTACTO -->
     <section class='contacto' id='contacto'>
       <h1>Contacto</h1>
     </section>
   </main>
+  <template>
+    <article class="card-project content-text">
+      <div class="border">
+        <h3 class="title"></h3>
+
+        <img src="" alt="Proyecto: portafolio web" />
+
+        <div class="text-card">
+
+          <span class="description"></span>
+          <hr>
+          Este proyecto fue desarrollado con:
+          <ul class="tecnologias">
+
+          </ul>
+          <div class="buttons">
+            <a class="btn-cv git" target="_blank">
+              <i class="icon fa-brands fa-github "></i>
+              <span class="text">Código</span>
+            </a>
+            <a class="btn-cv page" target="_blank">
+              <i class="icon fa-solid fa-globe "></i>
+              <span class="text">Página</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
   <!-- 
   
 
-    <section id="sobremi">
-      <h2 class="title">&#60;Sobre mí&#47;&#62;</h2>
-      <div class="content-sobremi">
-        <nav class="nav-sobremi">
-          <a target="_blank" id="nav-sobremi" class="active" data-name="perfil">Perfil</a>
-          <a target="_blank" id="nav-sobremi" data-name="formacion">Formación</a>
-          <a target="_blank" id="nav-sobremi" data-name="habilidades">Habilidades</a>
-        </nav>
-        <article class="perfil flex-container">
-          <span>Carlos Fernando Soto Chaguala</span>
-          <p>
-            Soy una persona responsable, puntual y muy comprometida
-            con las labores que se me asignan, aprendo con rapidez y
-            facilidad. Me gusta asumir nuevos retos para motivarme a
-            seguir creciendo profesionalmente, también soy una
-            persona organizada.
-          </p>
-          <a href="/images/Hoja de vida.pdf" download="cv_Carlos_Soto" class="btn-cv">Descargar CV</a>
-        </article>
-        <article class="formacion flex-container">
-          <div id="a">
-            <h3>Formación Academica</h3>
-            <ul>
-              <li>
-                <h4>Ingeniería de sistemas y computación</h4>
-                Universidad Tecnológica de Pereira
-              </li>
-              <li>
-                <h4>Técnico en diseño y desarrollo web</h4>
-                Instituto técnico superior de Pereira
-              </li>
-              <li>
-                <h4>Bachiller técnico</h4>
-                Instituto técnico superior de Pereira
-              </li>
-            </ul>
-          </div>
-          <div id="b">
-            <ul>
-              <h3>Cursos</h3>
-              <li>
-                <h4>Desarrollo web HTML, CSS, Javascript</h4>
-                Coursera - University of Michigan
-              </li>
-              <li>
-                <h4>Curso Javascript</h4>
-                Youtube - Jon Mircha
-              </li>
-              <li>
-                <h4>Fullstack Web developer</h4>
-                Full Stack Open 2021
-              </li>
-            </ul>
-          </div>
-
-        </article>
-        <article class="habilidades flex-container">
-          <figure>
-            <img src="./images/icons/html.svg" alt="HTML5 logo" class="logoSkills">
-            <figcaption>HTML 5</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/css.svg" alt="CSS3 logo" class="logoSkills">
-            <figcaption>CSS 3</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/javascript.svg" alt="Javascript logo" class="logoSkills">
-            <figcaption>Javascript</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/react.svg" alt="React logo" class="logoSkills">
-            <figcaption>React</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/sass.svg" alt="Sass logo" class="logoSkills">
-            <figcaption>Sass</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/nodejs.svg" alt="NodeJs logo" class="logoSkills">
-            <figcaption>Node JS</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/json.svg" alt="JSON logo" class="logoSkills">
-            <figcaption>JSON</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/icons/python.svg" alt="Python logo" class="logoSkills">
-            <figcaption>Python</figcaption>
-          </figure>
-        </article>
-      </div>
+    
     </section>
     <section id="projects">
       <h2 class="title">&#60;Proyectos&#47;&#62;</h2>
       <div class="container flex-container">
         <div class="card-project">
-          <img src="./images/Proyecto1-portafolio.png" alt="Proyecto: protafolio web" />
+          <img src="./assets/images/Proyecto1-portafolio.png" alt="Proyecto: protafolio web" />
           <div class="text-card flex-container">
             <span>Portafolio Web</span>
             <p>
@@ -352,19 +312,19 @@
             <ul>
               <li>
                 <figure>
-                  <img src="./images/icons/html.svg" alt="HTML5 logo" class="logoSkills">
+                  <img src="./assets/images/icons/html.svg" alt="HTML5 logo" class="logoSkills">
                   <figcaption>HTML 5</figcaption>
                 </figure>
               </li>
               <li>
                 <figure>
-                  <img src="./images/icons/css.svg" alt="CSS 3 logo" class="logoSkills">
+                  <img src="./assets/images/icons/css.svg" alt="CSS 3 logo" class="logoSkills">
                   <figcaption>CSS 3</figcaption>
                 </figure>
               </li>
               <li>
                 <figure>
-                  <img src="./images/icons/javascript.svg" alt="Javascript logo" class="logoSkills">
+                  <img src="./assets/images/icons/javascript.svg" alt="Javascript logo" class="logoSkills">
                   <figcaption>Javascript</figcaption>
                 </figure>
               </li>
@@ -379,7 +339,7 @@
         </div>
 
         <div class="card-project">
-          <img src="./images/Proyecto2-portafolio.png" alt="Proyecto: protafolio web" />
+          <img src="./assets/images/Proyecto2-portafolio.png" alt="Proyecto: protafolio web" />
           <div class="text-card flex-container">
             <span>Pokedex</span>
             <p>
@@ -389,13 +349,13 @@
             <ul>
               <li>
                 <figure>
-                  <img src="./images/icons/react.svg" alt="React Js logo" class="logoSkills">
+                  <img src="./assets/images/icons/react.svg" alt="React Js logo" class="logoSkills">
                   <figcaption>React Js</figcaption>
                 </figure>
               </li>
               <li>
                 <figure>
-                  <img src="./images/icons/sass.svg" alt="Sass logo" class="logoSkills">
+                  <img src="./assets/images/icons/sass.svg" alt="Sass logo" class="logoSkills">
                   <figcaption>Sass</figcaption>
                 </figure>
               </li>

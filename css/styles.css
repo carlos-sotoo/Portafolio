@@ -154,9 +154,45 @@ body .content-text {
   border-radius: 10px;
   padding: 10px;
 }
-body .content-text div {
+body .content-text .border {
   border-radius: 10px;
   border: 2px dashed #eeeae4;
+}
+body .btn-cv {
+  background-color: #048abf;
+  color: #eeeae4;
+  width: 130px;
+  height: 40px;
+  font: normal 1rem/2rem "Open Sans", sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px #000;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+}
+body .btn-cv .icon {
+  position: absolute;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  transition: all 0.3s linear;
+}
+body .btn-cv .text {
+  position: absolute;
+  line-height: 40px;
+  width: 90px;
+  text-align: left;
+  right: 0;
+  transition: all 0.3s linear;
+}
+body .btn-cv:hover .icon {
+  width: 100%;
+}
+body .btn-cv:hover .text {
+  right: -90px;
 }
 body header {
   position: fixed;
@@ -448,35 +484,6 @@ body section.inicio .text-profile .typewrite .wrap {
   -webkit-animation: wrap 0.2s ease-in infinite;
           animation: wrap 0.2s ease-in infinite;
 }
-body section.inicio .text-profile .btn-cv {
-  height: 40px;
-  width: 130px;
-  text-align: center;
-  line-height: 40px;
-  background-color: #048abf;
-  color: #eeeae4;
-  font-family: "Open Sans", sans-serif;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 0 10px;
-  box-shadow: 1px 2px 3px #000;
-  border: none;
-  cursor: pointer;
-}
-body section.inicio .text-profile .btn-cv .icon {
-  font-size: 1.1rem;
-  margin-left: -10px;
-  width: 30px;
-  border-right: 1px solid #0a74b1;
-  transition: all 200ms linear;
-}
-body section.inicio .text-profile .btn-cv:hover {
-  opacity: 0.8;
-}
-body section.inicio .text-profile .btn-cv:hover .icon {
-  width: 100%;
-  border-right: 0px solid #0a74b1;
-}
 @-webkit-keyframes wrap {
   0% {
     border-right: 2px solid #20202c;
@@ -647,6 +654,125 @@ body section.habilidades article div ul li::before {
   font-size: 1.2rem;
   font-weight: bold;
   margin-right: 7px;
+}
+body section.proyectos .frontend h2,
+body section.proyectos .backend h2 {
+  font: normal 4rem "Yellowtail", cursive;
+  text-align: center;
+}
+body section.proyectos .frontend .container,
+body section.proyectos .backend .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  gap: 20px;
+}
+body section.proyectos .frontend .container .card-project,
+body section.proyectos .backend .container .card-project {
+  width: 260px;
+  overflow: hidden;
+}
+body section.proyectos .frontend .container .card-project .border,
+body section.proyectos .backend .container .card-project .border {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+}
+body section.proyectos .frontend .container .card-project .border h3,
+body section.proyectos .backend .container .card-project .border h3 {
+  text-align: center;
+  font: bold 1.3rem "Open Sans", sans-serif;
+}
+body section.proyectos .frontend .container .card-project .border img,
+body section.proyectos .backend .container .card-project .border img {
+  width: 250px;
+  height: 140px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+body section.proyectos .frontend .container .card-project .border .text-card,
+body section.proyectos .backend .container .card-project .border .text-card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font: normal 0.8rem "Open Sans", sans-serif;
+  border-radius: 10px;
+  padding: 12px;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -12px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 32, 44, 0.8431372549);
+  transition: all 0.3s linear;
+}
+body section.proyectos .frontend .container .card-project .border .text-card hr,
+body section.proyectos .backend .container .card-project .border .text-card hr {
+  width: 100%;
+  opacity: 0.2;
+}
+body section.proyectos .frontend .container .card-project .border .text-card ul,
+body section.proyectos .backend .container .card-project .border .text-card ul {
+  text-align: left;
+  -webkit-columns: 3;
+     -moz-columns: 3;
+          columns: 3;
+}
+body section.proyectos .frontend .container .card-project .border .text-card ul li::before,
+body section.proyectos .backend .container .card-project .border .text-card ul li::before {
+  content: "✓";
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 2px;
+}
+body section.proyectos .frontend .container .card-project .border .text-card .buttons,
+body section.proyectos .backend .container .card-project .border .text-card .buttons {
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+body section.proyectos .frontend .container .card-project .border .text-card .buttons .btn-cv,
+body section.proyectos .backend .container .card-project .border .text-card .buttons .btn-cv {
+  height: 30px;
+  width: 100px;
+  background-color: #20202c;
+}
+body section.proyectos .frontend .container .card-project .border .text-card .buttons .btn-cv .icon,
+body section.proyectos .backend .container .card-project .border .text-card .buttons .btn-cv .icon {
+  width: 30px;
+  line-height: 30px;
+}
+body section.proyectos .frontend .container .card-project .border .text-card .buttons .btn-cv .text,
+body section.proyectos .backend .container .card-project .border .text-card .buttons .btn-cv .text {
+  width: 70px;
+  line-height: 30px;
+  font-size: 1rem;
+}
+body section.proyectos .frontend .container .card-project .border .text-card .buttons .btn-cv:hover .icon,
+body section.proyectos .backend .container .card-project .border .text-card .buttons .btn-cv:hover .icon {
+  width: 100%;
+}
+body section.proyectos .frontend .container .card-project .border .text-card .buttons .btn-cv:hover .text,
+body section.proyectos .backend .container .card-project .border .text-card .buttons .btn-cv:hover .text {
+  right: -70px;
+}
+body section.proyectos .frontend .container .card-project:hover .border .text-card,
+body section.proyectos .backend .container .card-project:hover .border .text-card {
+  top: -12px;
 }
 body[data-theme=dark] {
   /* Dark Mode styles */
