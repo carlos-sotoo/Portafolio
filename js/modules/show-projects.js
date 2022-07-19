@@ -1,7 +1,7 @@
 const proyectos = [
   {
     title: 'Portafolio web',
-    img: '../../assets/images/portafolioImg.png',
+    img: '../../assets/images/portafolioImg.webp',
     description: 'Portafolio web diseñado y desarrollado por Carlos Soto.',
     technologies: ['HTML', 'CSS', 'Javascript'],
     git: 'https://github.com/carlos-sotoo/Portafolio.git',
@@ -9,7 +9,7 @@ const proyectos = [
   },
   {
     title: 'Pokedex',
-    img: '../../assets/images/pokedexImg.gif',
+    img: '../../assets/images/pokedexImg.webp',
     description: 'Permite filtrar pokemones por tipo, nombre y la visualización de sus stats',
     technologies: ['React JS', 'Sass', 'PokeApi', 'SWR', 'router v6'],
     git: 'https://github.com/carlos-sotoo/pokedex',
@@ -17,7 +17,7 @@ const proyectos = [
   },
   {
     title: 'Fragmentos de código',
-    img: '../../assets/images/codepenImg.png',
+    img: '../../assets/images/codepenImg.webp',
     description: 'Fragmentos de código frontend. Contenido útil para otros proyectos.',
     technologies: ['HTML', 'CSS', 'Javascript', 'Sass', 'React JS'],
     git: false,
