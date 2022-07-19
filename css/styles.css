@@ -795,6 +795,7 @@ body section.contacto .icon {
 }
 body section.contacto .icon:hover {
   outline-offset: 4px;
+  color: #eeeae4;
 }
 body section.contacto .icon:hover.instagram {
   background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
