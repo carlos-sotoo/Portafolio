@@ -1,6 +1,5 @@
 import hamburguer from './modules/hamburguer-menu.js'
 import smoothScroll from './modules/smooth-scroll.js'
-import { sobreMiChange } from './modules/animations.js'
 import textdecore from './modules/writeMachine.js'
 import { darkMode } from './modules/dark-mode.js'
 import { showProjects } from './modules/show-projects.js'
@@ -34,19 +33,4 @@ window.addEventListener('DOMContentLoaded', () => {
             hamburguer('.btn-menu', '.menu')
         }
     })
-
-    /* EVENTO SMOOTH SCROLL AL INGRESAR POR UN PATH */
-
-
-    /* 
-        hamburguer('.menu-btn', '.menu')
-        smoothScroll('#nav-btn')
-        textdecore()
-        sobreMiChange('#nav-sobremi')
-        const contactForm = document.contact
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault()
-            contactForm.reset()
-            contactForm.msg.value = 'Mensaje enviado correctamente.'
-        }) */
 })
