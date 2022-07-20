@@ -864,6 +864,7 @@ body section.proyectos .backend .container .card-project:hover .border .text-car
 body section.contacto {
   display: -ms-flexbox;
   display: flex;
+  flex-flow: row nowrap;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-align: center;
