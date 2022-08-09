@@ -1,11 +1,11 @@
 const proyectos = [
   {
-    title: 'Portafolio web',
-    img: '../../assets/images/portafolioImg.webp',
-    description: 'Portafolio web diseñado y desarrollado por Carlos Soto.',
-    technologies: ['HTML', 'CSS', 'Javascript'],
-    git: 'https://github.com/carlos-sotoo/Portafolio.git',
-    page: 'https://carlos-soto.netlify.app'
+    title: 'Recipes App',
+    img: '../../assets/images/recipesAppImg.webp',
+    description: 'En la pagina princiapal se visualiza una receta aleatoria y visualiza las recetas visitadas ultimamente',
+    technologies: ['React JS', 'Sass', 'TheMealDB', 'router v6'],
+    git: 'https://github.com/carlos-sotoo/Recipes-App',
+    page: 'https://recipesapp-carlos-sotoo.vercel.app'
   },
   {
     title: 'Pokedex',
@@ -14,6 +14,14 @@ const proyectos = [
     technologies: ['React JS', 'Sass', 'PokeApi', 'SWR', 'router v6'],
     git: 'https://github.com/carlos-sotoo/pokedex',
     page: 'https://pokedex-carlos-sotoo.vercel.app'
+  },
+  {
+    title: 'Portafolio web',
+    img: '../../assets/images/portafolioImg.webp',
+    description: 'Portafolio web diseñado y desarrollado por Carlos Soto.',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    git: 'https://github.com/carlos-sotoo/Portafolio.git',
+    page: 'https://carlos-soto.netlify.app'
   },
   {
     title: 'Fragmentos de código',
